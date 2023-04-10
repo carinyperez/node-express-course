@@ -7,14 +7,18 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+const consoleLogger = require('./practice-middleware');
 
 // use middleware to serve static files 
 app.use(express.static('./new-public'));
+
+// use middleware console logger 
+app.use(consoleLogger)
 
 app.get('/sample', function(req, res) {
 	res.send('This is working')
 })
 
 app.listen(3000, function(req, res) {
-	console.log('Server listening on port 5000');
+	console.log('Server listening on port 3000');
 })
