@@ -1,0 +1,16 @@
+
+Middleware functions are functions that sit between the request and the response in an express application.
+For example let's say the client wants to send data to a server, sending a whole object would be an expensive operation
+so the clint serializes the data into JSON(Javascript Object Notation). The server is expecting a data object so we
+can deserialize the data using express.json() middleware. This server will accept the request, run the middleware and 
+return a response, so the middleware sits in the middle.  
+
+CRUD stands for Create, Read, Update and Delete and it refers to the four basic operations of persistent data storage.
+These operations can be mapped to the standard http methods POST, GET, PUT, DELETE. CRUD operations are the foundation 
+of most dynamic websites. 
+
+To get access to our environment variables in the env file we use the npm package dotenv, this package loads variables into process.env. 
+
+To protect the contents of our env file we include the env file in our .gitignore. Git ignores any files specified in this file 
+and doesn't upload them to github. If you accidentally upload you env file to github and then delete it,your passwords will still be compromised 
+because github keeps track of all your versions, so you must change all your compromised passwords.
