@@ -24,7 +24,10 @@ start();
 // middleware
 // in javascript you can serialize an object to a JSON string by calling the function JSON.stringify() 
 // and deserialize using JSON.parse(), express.json parses json into an object 
+// serve static assets 
+app.use(express.static('./public'))
 app.use(express.json())
+
 
 app.get('/hello', function(req, res) {
 	res.send('Task manager app')
